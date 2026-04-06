@@ -9,19 +9,26 @@
 <body class="bg-gray-50 text-gray-900 font-sans">
 
      <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 p-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <img src="logo3.jpg" alt="Lael Innovations Logo" class="h-16 w-auto object-contain">
-                <span class="text-xl font-black tracking-tighter text-slate-900">LAEL <span class="text-blue-600 ">INNOVATIONS</span></span>
-            </div>
-            <div class="flex flex-col md:flex-row gap-4 md:gap-8 text-sm font-semibold">
-                <a href="index.html" class="text-blue-600 font-bold underline underline-offset-4">Home</a>
-                <a href="services.html" class="hover:text-blue-600 transition">Services</a>
-                <a href="portfolio.html" class="hover:text-blue-600 transition">Portfolio</a>
-                 <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
-            </div>
-        </div>
-    </nav>
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div class="flex items-center gap-2">
+      <img src="logo3.jpg" alt="Logo" class="h-12 w-auto object-contain">
+      <span class="text-xl font-black tracking-tighter text-slate-900">LAEL <span class="text-blue-600">INNOVATIONS</span></span>
+    </div>
+
+    <button id="menu-btn" class="block md:hidden text-slate-900 focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <div id="menu-links" class="hidden md:flex flex-col md:flex-row absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-white md:bg-transparent p-6 md:p-0 gap-4 md:gap-8 text-sm font-semibold border-b md:border-none border-slate-100">
+      <a href="index.html" class="text-blue-600 font-bold">Home</a>
+      <a href="services.html" class="hover:text-blue-600 transition">Services</a>
+      <a href="portfolio.html" class="hover:text-blue-600 transition">Portfolio</a>
+      <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+    </div>
+  </div>
+</nav>
 
     <header class="max-w-6xl mx-auto py-20 px-6 text-center">
         <h2 class="text-5xl font-extrabold mb-4">Building the Future of <span class="text-blue-600">Ethiopian Tech.</span></h2>
@@ -175,6 +182,14 @@
         <p class="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">&copy; 2026 Lael Innovations. Built for the Future.</p>
     </div>
 </footer>
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu-links');
 
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    menu.classList.toggle('flex');
+  });
+</script>
 </body>
 </html>
